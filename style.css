@@ -14,13 +14,16 @@
 	--fc-primary: #e1e1e6;
 	--fc-secondary: #7c7c8a;
 	--fc-warning: #f75a68;
+	--fc-warning-hover: #f63242;
 
 	--bgc-table: #092d38;
 	--bgc-table-odd: #06161b;
-	--bgc-table-even: #092d38;
+	--bgc-table-even: #06181c;
 
 	--border-color: #4a808c;
 	--bgc-no-state: #030b0d;
+
+	--no-favs-color: #4e5455;
 }
 
 #app {
@@ -116,11 +119,20 @@ header {
 	border-radius: 1.2rem;
 	border: 1px solid var(--border-color);
 	overflow: hidden;
+
+	margin-bottom: 11.6rem;
 }
 
 table {
 	width: 100%;
+	line-height: 160%;
 	border-collapse: collapse;
+
+	color: var(--fc-primary);
+	font-size: 2rem;
+	text-align: left;
+	font-weight: 700;
+	font-style: normal;
 }
 
 table thead {
@@ -128,12 +140,6 @@ table thead {
 }
 
 table th {
-	color: var(--fc-primary);
-	font-size: 2rem;
-	font-style: normal;
-	text-align: left;
-	font-weight: 700;
-
 	padding: 1.6rem 4rem;
 }
 
@@ -146,10 +152,7 @@ table tbody tr:nth-child(odd) {
 }
 
 table td {
-	padding: 1.5rem 4rem;
-	text-align: left;
-	color: var(--fc-primary);
-	font-weight: 700;
+	padding: 2.4rem 4rem;
 }
 
 table tbody > tr {
@@ -195,8 +198,13 @@ td .remove {
 	cursor: pointer;
 }
 
+td .remove:hover {
+	color: var(--fc-warning-hover);
+}
+
 .no-state {
-	background: hsl(192, 63%, 3%);
+	background-color: hsl(192, 63%, 3%);
+	display: flex;
 }
 
 .no-favs {
@@ -214,7 +222,7 @@ td .remove {
 	font-weight: 700;
 	font-size: 4rem;
 	line-height: 2.5rem;
-	color: #4e5455;
+	color: var(--no-favs-color);
 }
 
 .hide {
