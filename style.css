@@ -11,7 +11,16 @@
 	--bgc-input: #06181c;
 	--bgc-btn: #065e7c;
 
+	--fc-primary: #e1e1e6;
 	--fc-secondary: #7c7c8a;
+	--fc-warning: #f75a68;
+
+	--bgc-table: #092d38;
+	--bgc-table-odd: #06161b;
+	--bgc-table-even: #092d38;
+
+	--border-color: #4a808c;
+	--bgc-no-state: #030b0d;
 }
 
 #app {
@@ -29,7 +38,7 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 8.7rem 0 8.7rem;
+	margin: 11.5rem 0 8.7rem;
 }
 
 .sr-only {
@@ -104,9 +113,8 @@ header {
 	font-size: 2rem;
 	font-weight: 700;
 	font-style: normal;
-	width: 100%;
 	border-radius: 1.2rem;
-	border: 1px solid #4a808c;
+	border: 1px solid var(--border-color);
 	overflow: hidden;
 }
 
@@ -116,34 +124,40 @@ table {
 }
 
 table thead {
-	background-color: #092d38;
-	border-bottom: 1px solid #4a808c;
+	background-color: var(--bgc-table);
 }
 
 table th {
+	color: var(--fc-primary);
 	font-size: 2rem;
 	font-style: normal;
 	text-align: left;
 	font-weight: 700;
-	padding: 1.5rem 4rem;
-	color: #e1e1e6;
+
+	padding: 1.6rem 4rem;
 }
 
 table tbody tr:nth-child(even) {
-	background: #014d5f;
+	background: var(--bgc-table-even);
 }
 
 table tbody tr:nth-child(odd) {
-	background: #06161b;
+	background: var(--bgc-table-odd);
 }
 
 table td {
 	padding: 1.5rem 4rem;
 	text-align: left;
-	color: #e1e1e6;
-	font-weight: 400;
+	color: var(--fc-primary);
+	font-weight: 700;
+}
 
-	border-bottom: 1px solid #4a808c;
+table tbody > tr {
+	border-bottom: 1px solid var(--border-color);
+}
+
+table tr:last-child {
+	border-bottom: none;
 }
 
 td.user {
@@ -162,11 +176,11 @@ td.user img {
 
 td.user a {
 	text-decoration: none;
-	color: #e1e1e6;
+	color: var(--fc-primary);
 }
 
-td.user a p {
-	font-weight: bold;
+td.user a span {
+	font-weight: 400;
 }
 
 td .remove {
@@ -176,7 +190,7 @@ td .remove {
 	font-size: 2rem;
 	font-weight: 700;
 	font-style: normal;
-	color: #f75a68;
+	color: var(--fc-warning);
 
 	cursor: pointer;
 }
