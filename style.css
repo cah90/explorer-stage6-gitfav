@@ -14,6 +14,11 @@
 	--fc-secondary: #7c7c8a;
 }
 
+#app {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
 body {
 	background-color: var(--bgc-body);
 
@@ -23,7 +28,7 @@ body {
 
 header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin: 8.7rem 0 8.7rem;
 }
 
@@ -69,7 +74,7 @@ header {
 	font-weight: 400;
 }
 
-button {
+.search button {
 	display: flex;
 	gap: 0.8rem;
 	align-items: center;
@@ -87,10 +92,117 @@ button {
 
 	cursor: pointer;
 
-	transition: background-color 1s, color 1s;
+	transition: background-color 0.7s, color 0.7s;
 }
 
-button:hover {
+.search button:hover {
 	color: var(--bgc-btn);
 	background-color: #fff;
+}
+
+.main {
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: normal;
+	width: 100%;
+	border-radius: 1.2rem;
+	border: 1px solid #4a808c;
+	overflow: hidden;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table thead {
+	background-color: #092d38;
+	border-bottom: 1px solid #4a808c;
+}
+
+table th {
+	font-size: 2rem;
+	font-style: normal;
+	text-align: left;
+	font-weight: 700;
+	padding: 1.5rem 4rem;
+	color: #e1e1e6;
+}
+
+table tbody tr:nth-child(even) {
+	background: #014d5f;
+}
+
+table tbody tr:nth-child(odd) {
+	background: #06161b;
+}
+
+table td {
+	padding: 1.5rem 4rem;
+	text-align: left;
+	color: #e1e1e6;
+	font-weight: 400;
+
+	border-bottom: 1px solid #4a808c;
+}
+
+td.user {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+td.user img {
+	width: 5rem;
+	height: 5rem;
+
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+td.user a {
+	text-decoration: none;
+	color: #e1e1e6;
+}
+
+td.user a p {
+	font-weight: bold;
+}
+
+td .remove {
+	background: none;
+	border: none;
+
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: normal;
+	color: #f75a68;
+
+	cursor: pointer;
+}
+
+.no-state {
+	background: hsl(192, 63%, 3%);
+}
+
+.no-favs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6rem;
+
+	margin: 21rem auto 28.7rem;
+}
+
+.no-favs h1 {
+	font-family: "Roboto Mono";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 4rem;
+	line-height: 2.5rem;
+	color: #4e5455;
+}
+
+.hide {
+	display: none;
 }
