@@ -21,7 +21,7 @@ This project was developed using the technologies below:
 
 ## Access the project:
 
-- [https://cah90.github.io/explorer-stage6-gitfav/]
+- [GitFavs](https://cah90.github.io/explorer-stage6-gitfav/)
 
 ## How to install:
 
